@@ -43,7 +43,10 @@
   <ItemGroup>
     <Compile Include="Calculadora.cs" />
     <Compile Include="Conta.cs" />
+    <Compile Include="IValidadorCredito.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidadorCreditoFake.cs" />
+    <Compile Include="ValidadorCredito.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

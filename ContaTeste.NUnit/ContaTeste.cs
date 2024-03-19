@@ -1,26 +1,23 @@
 ﻿using NUnit.Framework;
 using Principal;
-using System;
 
 namespace ContaTeste.NUnit
 {
     [TestFixture]
+    [Ignore("Projeto sem mock")]
     public class ContaTeste
     {
         Conta conta;
 
         [SetUp]
-        //[OneTimeSetUp]
         public void SetUp()
         {
             conta = new Conta("123456", 200);
         }
 
-        //[TearDown]
         [OneTimeTearDown]
         public void TearDown()
         {
-            // código executado após cada teste
             conta = null;
         }
 
@@ -72,39 +69,11 @@ namespace ContaTeste.NUnit
         [Test]
         [Timeout(4000)]
         [Category("Testes Didáticos")]
-        //[Ignore("Pêndencia de criação de regra 002")]
         public void testMetodoLento()
         {
             bool resultado = conta.Sacar(0);
 
             Assert.IsFalse(resultado);
-        }
-
-        [Test]
-        [Category("Testes Didáticos")]
-        //[Ignore("Pêndencia de criação de regra 002")]
-        public void testAssert()
-        {
-            Assert.Ignore("Testes de exemplo da classe Assert...");
-            var teste = "";
-
-            //Assert.IsEmpty(teste);
-            //Assert.IsNull(teste);
-
-            int a = 10, b = 9;
-
-            //Assert.Greater(a, b);
-            //Assert.AreSame(a, b);
-            //Assert.Negative(a);
-            //Assert.Less(b, a);
-
-            var primeiraConta = new Conta("0123456789", 100);
-            //var segundaConta = new Conta("0123456789", 100);
-            var segundaConta = primeiraConta;
-
-            //Assert.AreSame(primeiraConta, segundaConta);
-            //Assert.IsNull(primeiraConta);
-            Assert.IsNotNull(primeiraConta);
         }
     }
 }

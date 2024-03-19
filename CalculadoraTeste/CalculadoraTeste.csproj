@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Calculadora\Calculadora.csproj" />
+    <ProjectReference Include="..\Calculadora\Conta.csproj" />
   </ItemGroup>
 
 </Project>

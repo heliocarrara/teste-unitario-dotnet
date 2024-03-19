@@ -1,7 +1,4 @@
-﻿using Principal;
-using System;
-
-namespace Teste
+﻿namespace Teste
 {
     class Program
     {
